@@ -69,3 +69,43 @@ const post = [
 
 
 console.log(post);
+
+
+// Recupero elemento dalla pagina 
+
+const postContainer = document.getElementById("container");
+
+
+
+// FUNZIONI ------------------------------------------------------------------------------
+
+function postGenerator(post) {
+    let posts = `<div class="post" id=${post.id}></div>`;
+
+
+    posts += `<div class="post-meta__icon">
+                <img class="profile-pic" src="${post.propic} alt="${post.propic}">
+             </div>`;
+}
+
+postGenerator(post);
+
+//Stampa nel postContainer 
+function postPrint() {
+    for (let i = 0; i < post.length; i++) {
+        postContainer.innerHTML += postGenerator(post[i]);
+    }
+}
+
+postPrint();
+
+
+
+
+
+
+
+
+
+
+
