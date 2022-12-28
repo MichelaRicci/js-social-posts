@@ -83,10 +83,33 @@ let posts = '';
 for (let i = 0; i < post.length; i++) {
     
     posts += `
-        <div class="post-meta__icon">
-            <img class="profile-pic" src="${post[i].propic} alt="${post[i].author}">
-        </div>`;   
+
+    <div class="post">
+        <div class="post__header">
+            <div class="post-meta">
+                <div class="post-meta__icon">
+                    <img class="profile-pic" src="${post[i].propic}">
+                </div>
+                <div class="post-meta__data">
+                    <div class="post-meta__author">${post[i].author}</div>
+                    <div class="post-meta__time">${post[i].date}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="post__text">${post[i].caption}</div>
+        <div class="post__image">
+          <img src="${post[i].img}" alt="" />
+        </div>
+
         
+
+        
+
+
+
+    </div>`;  
+
 }
 
 
