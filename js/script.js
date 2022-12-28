@@ -33,8 +33,6 @@ const post = [
         caption: '',
         img: 'https://picsum.photos/300/300',
         likes: 80,
-
-
     },
 
     {
@@ -77,28 +75,26 @@ const postContainer = document.getElementById("container");
 
 
 
-// FUNZIONI ------------------------------------------------------------------------------
-
-function postGenerator(post) {
-    let posts = `<div class="post" id=${post.id}></div>`;
 
 
-    posts += `<div class="post-meta__icon">
-                <img class="profile-pic" src="${post.propic} alt="${post.propic}">
-             </div>`;
+
+let posts = '';
+
+for (let i = 0; i < post.length; i++) {
+    
+    posts += `
+        <div class="post-meta__icon">
+            <img class="profile-pic" src="${post[i].propic} alt="${post[i].author}">
+        </div>`;   
+        
 }
 
-postGenerator(post);
 
-//Stampa nel postContainer 
-function postPrint() {
-    for (let i = 0; i < post.length; i++) {
-        postContainer.innerHTML += postGenerator(post[i]);
-    }
-}
 
-postPrint();
 
+
+
+postContainer.innerHTML += posts;
 
 
 
