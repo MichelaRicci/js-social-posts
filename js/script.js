@@ -30,7 +30,7 @@ const post = [
         author: 'Phil Mangione',
         date: '11-21-2022',
 
-        caption: '',
+        caption: 'Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.',
         img: 'https://picsum.photos/300/300',
         likes: 80,
     },
@@ -102,12 +102,18 @@ for (let i = 0; i < post.length; i++) {
           <img src="${post[i].img}" alt="" />
         </div>
 
+        <div class="post__footer">
+            <div class="likes js-likes">
+                <div class="likes__cta">
+                <button class="like-button js-like-button" href="#" data-postid="${post[i].id}">
+                    <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
+                    <span class="like-button__label">Mi Piace</span>
+                </button>
+                </div>
+                <div class="likes__counter">Piace a <b id="like-counter-${post[i].id}" class="js-likes-counter">${post[i].likes}</b> persone</div>
+            </div>
+        </div>
         
-
-        
-
-
-
     </div>`;  
 
 }
